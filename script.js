@@ -15,9 +15,9 @@ function onLoad()
 if(document.cookie)
 {
 result=document.cookie.split("; ");
-fontSize.value=parseInt(result[result.length-2].split("=")[1])+"px";
-fontColor.value=result[result.length-1].split("=")[1]);
-document.body.style.fontsize=fontSize.value;
+fontSize.value=parseInt(result[result.length-2].split("=")[1]);
+fontColor.value=result[result.length-1].split("=")[1];
+document.body.style.fontSize=fontSize.value+"px";
 	document.body.style.color=fontColor.value;
 
 }
