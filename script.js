@@ -15,11 +15,12 @@ function onLoad()
 if(document.cookie)
 {
 result=document.cookie.split("; ");
-}
-	fontSize.value=result[result.length-1].split("=")[1];
+		fontSize.value=result[result.length-1].split("=")[1];
 fontColor.value=result[result.length-2].split("=")[1];
 document.body.style.fontsize=fontSize.value;
 	document.body.style.color=fontColor.value;
+}
+
 }
 
 
