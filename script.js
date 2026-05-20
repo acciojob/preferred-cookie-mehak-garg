@@ -11,15 +11,16 @@ function onSave(e)
 }
 function onLoad()
 {
+	let result;
 if(document.cookie)
 {
-	let result=document.cookie.map((item)=>{
-		return [item.split("=")[0],item.split("=")[1]];
-	})
+result=document.cookie.split("; ");
 }
-  fontSize.value=result[0][1];
-	fontColor.value=result[1][1];
-	document.body.style.fontsize=fontSize.value;
+	fontSize.value=result[result.length-1].split("=")[1];
+fontColor.value=result[result.length-2].split("=")[1];
+document.body.style.fontsize=fontSize.value;
 	document.body.style.color=fontColor.value;
 }
+
+
 onLoad();
